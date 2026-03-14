@@ -110,7 +110,7 @@ const Overlay: React.FC<OverlayProps> = ({ scrollYProgress }) => {
             <span className="text-gray-400">precision.</span>
           </h2>
           <p className="text-gray-500 text-sm leading-relaxed">
-            Selenium, TestNG &amp; Postman for quality —
+            Selenium, TestNG &amp; Postman for quality,
             <br />manual and automated, end-to-end.
           </p>
         </div>
@@ -136,7 +136,7 @@ const Overlay: React.FC<OverlayProps> = ({ scrollYProgress }) => {
             </span>
           </h2>
           <motion.a
-            href="mailto:hello@example.com"
+            href="#contact"
             className="pointer-events-auto inline-flex items-center gap-3 px-8 py-4 border border-white/20 rounded-full text-sm font-semibold text-white hover:bg-white hover:text-[#121212] transition-all duration-300 group"
             whileHover={{ scale: 1.04 }}
             whileTap={{ scale: 0.97 }}
