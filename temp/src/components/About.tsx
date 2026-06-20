@@ -5,8 +5,8 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 
 const STATS = [
-  { value: '4',    label: 'Year Undergraduate' },
-  { value: '5+',  label: 'Projects Built' },
+  { value: '4', label: 'Year Undergraduate' },
+  { value: '4+', label: 'Projects Built' },
   { value: '10+', label: 'Technologies' },
   { value: '2026', label: 'Graduating' },
 ];
@@ -26,7 +26,7 @@ const About: React.FC = () => (
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="text-sm tracking-[0.3em] text-gray-400 dark:text-gray-600 uppercase mb-5"
+        className="text-[10px] tracking-[0.3em] text-gray-400 dark:text-gray-600 uppercase mb-5"
       >
         About Me
       </motion.p>
@@ -49,28 +49,28 @@ const About: React.FC = () => (
             </span>
           </h2>
 
-          <div className="space-y-5 text-gray-600 dark:text-gray-400 text-lg leading-[1.9]">
+          <div className="space-y-5 text-gray-600 dark:text-gray-500 text-[15px] leading-[1.8]">
             <p>
-              I&apos;m a <span className="text-gray-800 dark:text-gray-200 font-medium">final year Computer Science undergraduate</span> at General Sir John Kotelawala Defence University with a strong interest in both software development and software quality assurance.
+              I&apos;m a <span className="text-gray-800 dark:text-gray-300 font-medium">final year Computer Science undergraduate</span> at General Sir John Kotelawala Defence University with a strong interest in both software development and software quality assurance.
             </p>
             <p>
-              My academic journey has allowed me to work on practical projects spanning <span className="text-gray-800 dark:text-gray-200 font-medium">AI systems, web applications, and software testing environments</span> gaining experience in responsive UI design, backend integrations, and structured software testing.
+              My academic journey has allowed me to work on practical projects spanning <span className="text-gray-800 dark:text-gray-300 font-medium">AI systems, web applications, and software testing environments</span> gaining experience in responsive UI design, backend integrations, and structured software testing.
             </p>
             <p>
-              I am particularly interested in building <span className="text-gray-800 dark:text-gray-200 font-medium">reliable software systems</span> and ensuring applications meet high quality standards. I am always eager to learn new technologies, collaborate with teams, and contribute to innovative software solutions.
+              I am particularly interested in building <span className="text-gray-800 dark:text-gray-300 font-medium">reliable software systems</span> and ensuring applications meet high quality standards. I am always eager to learn new technologies, collaborate with teams, and contribute to innovative software solutions.
             </p>
           </div>
 
           {/* CTA links */}
           <div className="flex flex-wrap items-center gap-4 mt-10">
             <motion.a
-              href="/DB_Gamage_QA.pdf"
+              href="/DB_Gamage_QA"
               target="_blank"
               rel="noopener noreferrer"
               download
               whileHover={{ scale: 1.04 }}
               whileTap={{ scale: 0.97 }}
-              className="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 dark:bg-white text-white dark:text-[#121212] font-semibold text-base rounded-full hover:bg-gray-700 dark:hover:bg-gray-100 transition-colors duration-200"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 dark:bg-white text-white dark:text-[#121212] font-semibold text-sm rounded-full hover:bg-gray-700 dark:hover:bg-gray-100 transition-colors duration-200"
             >
               Download CV
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -81,7 +81,7 @@ const About: React.FC = () => (
               href="#contact"
               whileHover={{ scale: 1.04 }}
               whileTap={{ scale: 0.97 }}
-              className="inline-flex items-center gap-2 px-6 py-3 border border-black/[0.12] dark:border-white/[0.12] text-gray-900 dark:text-white font-semibold text-base rounded-full hover:border-black/30 dark:hover:border-white/30 hover:bg-black/5 dark:hover:bg-white/5 transition-all duration-200"
+              className="inline-flex items-center gap-2 px-6 py-3 border border-black/[0.12] dark:border-white/[0.12] text-gray-900 dark:text-white font-semibold text-sm rounded-full hover:border-black/30 dark:hover:border-white/30 hover:bg-black/5 dark:hover:bg-white/5 transition-all duration-200"
             >
               Get in touch
             </motion.a>
@@ -98,17 +98,40 @@ const About: React.FC = () => (
         >
           <div className="relative">
             {/* Glow ring behind image */}
-            <div className="absolute -inset-4 rounded-3xl bg-gradient-to-br from-blue-500/25 via-indigo-500/15 to-purple-500/25 blur-2xl" />
-            {/* Image container — larger size */}
-            <div className="relative w-80 h-96 md:w-96 md:h-[28rem] rounded-3xl overflow-hidden border border-black/[0.08] dark:border-white/[0.1]">
+            <div className="absolute -inset-3 rounded-3xl bg-gradient-to-br from-blue-500/20 via-indigo-500/10 to-purple-500/20 blur-xl" />
+            {/* Image container */}
+            <div className="relative w-64 h-72 md:w-72 md:h-80 rounded-3xl overflow-hidden border border-black/[0.08] dark:border-white/[0.1] bg-black/[0.04] dark:bg-white/[0.04]">
+              {/* 
+                ╔══════════════════════════════════════════════════╗
+                ║  PROFILE IMAGE INSTRUCTIONS                      ║
+                ║                                                  ║
+                ║  Place your photo at:                            ║
+                ║  /temp/public/profile.jpg                        ║
+                ║  (or profile.png / profile.webp)                 ║
+                ║                                                  ║
+                ║  Recommended: square crop, min 400×400px         ║
+                ╚══════════════════════════════════════════════════╝
+              */}
               <Image
-                src="/profile.png"
+                src="\profile.png"
                 alt="Damiru Gamage"
                 fill
-                sizes="(max-width: 768px) 320px, 384px"
                 className="object-cover object-top"
                 priority
+                onError={(e) => {
+                  // Fallback if image not found — shows initials placeholder
+                  const target = e.target as HTMLImageElement;
+                  target.style.display = 'none';
+                }}
               />
+              {/* Fallback initials shown when image missing */}
+              <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900">
+                <div className="text-center">
+                  <p className="text-6xl font-black text-gray-300 dark:text-gray-600 tracking-tighter">DG</p>
+                  <p className="text-[10px] tracking-[0.2em] text-gray-400 dark:text-gray-600 uppercase mt-2">Add photo</p>
+                  <p className="text-[9px] text-gray-400 dark:text-gray-600 mt-1">public/profile.jpg</p>
+                </div>
+              </div>
             </div>
             {/* Decorative corner accent */}
             <div className="absolute -bottom-3 -right-3 w-16 h-16 rounded-2xl border border-black/[0.06] dark:border-white/[0.06] bg-black/[0.02] dark:bg-white/[0.02]" />
@@ -137,7 +160,7 @@ const About: React.FC = () => (
                 className="rounded-2xl bg-black/[0.03] dark:bg-white/[0.04] border border-black/[0.07] dark:border-white/[0.07] p-6 hover:border-black/20 dark:hover:border-white/20 hover:bg-black/[0.05] dark:hover:bg-white/[0.06] transition-all duration-300"
               >
                 <p className="text-4xl font-black text-gray-900 dark:text-white tracking-tighter mb-1">{s.value}</p>
-                <p className="text-sm text-gray-400 dark:text-gray-500 tracking-[0.12em] uppercase">{s.label}</p>
+                <p className="text-xs text-gray-400 dark:text-gray-600 tracking-[0.15em] uppercase">{s.label}</p>
               </motion.div>
             ))}
           </div>
@@ -152,14 +175,14 @@ const About: React.FC = () => (
         >
           <div className="rounded-2xl bg-black/[0.03] dark:bg-white/[0.04] border border-black/[0.07] dark:border-white/[0.07] p-7 space-y-5">
             {[
-              { label: 'Degree',     value: 'BSc (Hons) Computer Science' },
+              { label: 'Degree', value: 'BSc (Hons) Computer Science' },
               { label: 'University', value: 'General Sir John Kotelawala Defence University' },
-              { label: 'Focus',      value: 'Software Development & QA Engineering' },
-              { label: 'Status',     value: 'Open to internships & grad roles' },
+              { label: 'Focus', value: 'Software Development & QA Engineering' },
+              { label: 'Status', value: 'Open to internships & grad roles' },
             ].map(({ label, value }) => (
               <div key={label} className="flex items-start justify-between gap-4 border-b border-black/[0.05] dark:border-white/[0.05] pb-5 last:border-0 last:pb-0">
-                <span className="text-sm tracking-[0.1em] text-gray-400 dark:text-gray-500 uppercase shrink-0 pt-0.5 font-medium">{label}</span>
-                <span className="text-base text-gray-700 dark:text-gray-300 text-right leading-relaxed">{value}</span>
+                <span className="text-[11px] tracking-[0.15em] text-gray-400 dark:text-gray-600 uppercase shrink-0 pt-0.5">{label}</span>
+                <span className="text-sm text-gray-700 dark:text-gray-300 text-right">{value}</span>
               </div>
             ))}
           </div>
