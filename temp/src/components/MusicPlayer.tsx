@@ -58,7 +58,11 @@ const MusicPlayer: React.FC = () => {
   const togglePlay = () => {
     const a = getAudio();
     if (!a) return;
-    a.paused ? a.play().catch(() => { }) : a.pause();
+    if (a.paused) {
+      a.play().catch(() => { });
+    } else {
+      a.pause();
+    }
   };
 
   // ── Volume ──────────────────────────────────────────────────────────────────
