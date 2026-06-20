@@ -35,7 +35,7 @@ const About: React.FC = () => {
         </motion.p>
 
         {/* Top row: headline + image */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 items-start mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 items-center mb-16">
           {/* Left — headline + bio */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -97,13 +97,13 @@ const About: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="flex justify-center lg:justify-end"
+            className="flex justify-center lg:justify-end lg:pl-6"
           >
             <div className="relative">
               {/* Glow ring behind image */}
               <div className="absolute -inset-3 rounded-3xl bg-gradient-to-br from-blue-500/20 via-indigo-500/10 to-purple-500/20 blur-xl" />
               {/* Image container */}
-              <div className="relative w-80 h-96 md:w-96 md:h-[28rem] rounded-3xl overflow-hidden border border-black/[0.08] dark:border-white/[0.1] bg-black/[0.04] dark:bg-white/[0.04]">
+              <div className="relative w-72 h-[22rem] md:w-80 md:h-[24rem] rounded-3xl overflow-hidden border border-black/[0.08] dark:border-white/[0.1] bg-black/[0.04] dark:bg-white/[0.04]">
                 {!imgError && (
                   <Image
                     src="/profile.png"
