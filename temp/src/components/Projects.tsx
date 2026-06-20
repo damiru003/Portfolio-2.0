@@ -19,6 +19,22 @@ interface Project {
 const PROJECTS: Project[] = [
   {
     id: 1,
+    title: 'VeriLearn – AI-Assisted Feynman Learning System',
+    year: '2026',
+    role: 'Final Year Research Project · Full-Stack Developer · Python, React, NLP',
+    description:
+      'An AI-assisted web application that transforms complex academic texts into beginner-friendly explanations using the Feynman Technique. Generates structured simplifications with real-life analogies, step-by-step breakdowns, and "why-it-works" reasoning, then automatically verifies factual accuracy using NLI with DeBERTa-v3-small, producing a measurable Support Score. Low-quality outputs are auto-regenerated via a self-correction loop, and interactive quizzes reinforce retention.',
+    qaPoints: [
+      'Integrated an automated faithfulness-verification pipeline: claims extracted from AI output are verified against source text using semantic retrieval and Natural Language Inference (NLI).',
+      'Built a self-correction loop that regenerates explanations falling below a quality threshold ensuring pedagogically sound, faithful outputs.',
+      'Designed controlled experiment protocol with 20–30 CS undergraduates comparing comprehension and one-week retention across three conditions (original text, unstructured LLM, VeriLearn).',
+    ],
+    tags: ['Python', 'React', 'NLP', 'DeBERTa', 'LLM', 'Feynman Technique', 'NLI'],
+    gradient: 'from-violet-500 via-purple-600 to-indigo-600',
+    github: 'https://github.com/damiru003/Feynman_System',
+  },
+  {
+    id: 2,
     title: 'Attend AI – Intelligent Attendance System',
     year: '2025',
     role: 'Solo Project · QA & Developer Role · Python, Flask, dlib, OpenCV',
@@ -34,7 +50,7 @@ const PROJECTS: Project[] = [
     github: 'https://github.com/damiru003/Face-attendance-system',
   },
   {
-    id: 2,
+    id: 3,
     title: 'Accident, Complaint & Certification Management System',
     year: '2025',
     role: 'Group Project · QA Role · MERN Stack',
@@ -51,7 +67,7 @@ const PROJECTS: Project[] = [
     github: 'https://github.com/damiru003',
   },
   {
-    id: 3,
+    id: 4,
     title: 'PlanTogether',
     year: '2026',
     role: 'Solo Project · QA & Developer Role · React, TypeScript, Firebase',
@@ -67,7 +83,7 @@ const PROJECTS: Project[] = [
     github: 'https://github.com/damiru003/PlanTogether',
   },
   {
-    id: 4,
+    id: 5,
     title: 'Selenium Test Automation Framework',
     year: '2026',
     role: 'Solo Project · Ongoing · Java, Selenium WebDriver, TestNG',
@@ -83,7 +99,7 @@ const PROJECTS: Project[] = [
     github: 'https://github.com/damiru003/Selenium_Test_Automation_Framework',
   },
   {
-    id: 5,
+    id: 6,
     title: 'Bookstore Management System',
     year: '2025',
     role: 'Solo Project · QA & Developer Role · Python, Owlready2, Mesa',
@@ -100,7 +116,7 @@ const PROJECTS: Project[] = [
     github: 'https://github.com/damiru003/Bookstore-Management-System-with-Ontology-and-Multi-Agent--Simulation',
   },
   {
-    id: 6,
+    id: 7,
     title: 'Image Denoising Application',
     year: '2025',
     role: 'Solo Project · Developer Role · Python, Deep Learning',
