@@ -7,54 +7,124 @@ interface Project {
   id: number;
   title: string;
   year: string;
+  role: string;
   description: string;
+  qaPoints: string[];
   tags: string[];
   gradient: string;
-  link?: string;
+  github?: string;
+  live?: string;
 }
 
 const PROJECTS: Project[] = [
   {
     id: 1,
-    title: 'PlanTogether',
-    year: '2024',
+    title: 'Attend AI – Intelligent Attendance System',
+    year: '2025',
+    role: 'Solo Project · QA & Developer Role · Python, Flask, dlib, OpenCV',
     description:
-      'A multi-organization event planning platform built with React, TypeScript, and Firebase. Supports event management, RSVP tracking, real-time voting, comment threads, and secure role-based access control across organizations.',
-    tags: ['React', 'TypeScript', 'Firebase', 'RBAC'],
-    gradient: 'from-indigo-500 via-purple-500 to-pink-500',
-    link: '#',
+      'An AI-powered attendance system using face recognition and computer vision to automatically record student attendance and detect emotions in real time, reducing manual tracking overhead.',
+    qaPoints: [
+      'Authored 25+ test scenarios targeting face detection edge cases, attendance marking logic, and email notification flows.',
+      'Exposed low-light and camera-access failures through real-world environmental testing, tracked fixes through full regression cycles.',
+      'Validated liveness and emotion detection pipelines under varied lighting and face-angle conditions.',
+    ],
+    tags: ['Python', 'Flask', 'dlib', 'OpenCV', 'Face Recognition', 'AI'],
+    gradient: 'from-emerald-400 via-cyan-500 to-blue-500',
+    github: 'https://github.com/damiru003/Face-attendance-system',
   },
   {
     id: 2,
-    title: 'AI Attendance System',
-    year: '2024',
+    title: 'Accident, Complaint & Certification Management System',
+    year: '2025',
+    role: 'Group Project · QA Role · MERN Stack',
     description:
-      'An AI-powered attendance system using face recognition and computer vision techniques to automatically record student attendance and detect emotions in real time, reducing manual tracking overhead.',
-    tags: ['Python', 'OpenCV', 'Face Recognition', 'AI'],
-    gradient: 'from-emerald-400 via-cyan-500 to-blue-500',
-    link: '#',
+      'A management platform for Bio Foods (PVT) LTD handling accident reporting, complaint management, certification tracking, and procedure change requests across organisational workflows.',
+    qaPoints: [
+      'Designed and executed 40+ manual test cases for accident reporting, complaint management, certification tracking, and procedure change request modules.',
+      'Performed API testing using Postman to validate backend endpoints.',
+      'Logged and tracked defects through their full lifecycle ensuring clear reproduction steps and status updates for developers.',
+      'Validated role-based access, approval workflows, notifications, and report generation.',
+    ],
+    tags: ['MERN Stack', 'Manual Testing', 'Postman', 'API Testing', 'Defect Tracking'],
+    gradient: 'from-rose-400 via-orange-400 to-amber-400',
+    github: 'https://github.com/damiru003',
   },
   {
     id: 3,
-    title: 'Image Denoising Application',
-    year: '2024',
+    title: 'PlanTogether',
+    year: '2026',
+    role: 'Solo Project · QA & Developer Role · React, TypeScript, Firebase',
     description:
-      'A deep learning application that uses convolutional neural networks to remove noise from images and restore image quality. Trained and evaluated on standard image datasets with measurable PSNR improvements.',
-    tags: ['Python', 'Deep Learning', 'CNN', 'Image Processing'],
-    gradient: 'from-orange-400 via-rose-500 to-pink-600',
-    link: '#',
+      'A multi-organization event planning platform supporting event management, RSVP tracking, real-time voting, comment threads, and secure role-based access control across organizations.',
+    qaPoints: [
+      'Designed and executed 30+ test cases for features such as event creation, voting, RSVP tracking, and comments.',
+      'Implemented unit tests with Jest & React Testing Library.',
+      'Validated Firebase auth and real-time sync with full defect documentation across release cycles.',
+    ],
+    tags: ['React', 'TypeScript', 'Firebase', 'Jest', 'RBAC'],
+    gradient: 'from-indigo-500 via-purple-500 to-pink-500',
+    github: 'https://github.com/damiru003/PlanTogether',
   },
   {
     id: 4,
-    title: 'Bookstore Management Simulation',
-    year: '2023',
+    title: 'Selenium Test Automation Framework',
+    year: '2026',
+    role: 'Solo Project · Ongoing · Java, Selenium WebDriver, TestNG',
     description:
-      'An intelligent bookstore simulation system using ontology-based knowledge representation and software agents to model real-world bookstore operations including inventory management, purchase recommendations, and customer interactions.',
-    tags: ['Ontology', 'Intelligent Agents', 'Knowledge Representation'],
+      'A comprehensive web automation test suite built with Selenium WebDriver and TestNG to validate end-to-end user flows on web applications using the Page Object Model design pattern.',
+    qaPoints: [
+      'Building a test automation framework using Selenium and TestNG with the Page Object Model design pattern.',
+      'Creating reusable wrapper methods and structured automation, application, and test layers.',
+      'Executing regression test suites via TestNG XML, with Extent Reports and screenshot capture on failure supporting pre-release quality gates.',
+    ],
+    tags: ['Selenium', 'TestNG', 'Java', 'POM', 'Extent Reports'],
+    gradient: 'from-cyan-500 via-teal-500 to-emerald-500',
+    github: 'https://github.com/damiru003/Selenium_Test_Automation_Framework',
+  },
+  {
+    id: 5,
+    title: 'Bookstore Management System',
+    year: '2025',
+    role: 'Solo Project · QA & Developer Role · Python, Owlready2, Mesa',
+    description:
+      'An intelligent bookstore simulation using ontology-based knowledge representation and software agents to model real-world bookstore operations including inventory management, purchase recommendations, and customer interactions.',
+    qaPoints: [
+      'Tested ontology-based bookstore simulation with customer and employee agents.',
+      'Designed scenarios for agent browsing, purchasing, and restocking.',
+      'Validated SWRL rule logic and inter-agent communication.',
+      'Identified logic errors and simulation edge cases through exploratory GUI testing.',
+    ],
+    tags: ['Python', 'Owlready2', 'Mesa', 'Ontology', 'Intelligent Agents'],
     gradient: 'from-violet-500 via-fuchsia-500 to-indigo-500',
-    link: '#',
+    github: 'https://github.com/damiru003/Bookstore-Management-System-with-Ontology-and-Multi-Agent--Simulation',
+  },
+  {
+    id: 6,
+    title: 'Image Denoising Application',
+    year: '2025',
+    role: 'Solo Project · Developer Role · Python, Deep Learning',
+    description:
+      'A deep learning application that uses convolutional neural networks to remove noise from images and restore image quality. Trained and evaluated on standard image datasets with measurable PSNR improvements.',
+    qaPoints: [],
+    tags: ['Python', 'Deep Learning', 'CNN', 'Image Processing'],
+    gradient: 'from-orange-400 via-rose-500 to-pink-600',
+    github: 'https://github.com/damiru003/Noiceremoval',
   },
 ];
+
+// ── Icons ─────────────────────────────────────────────────────────────────────
+const GitHubIcon = () => (
+  <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
+    <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
+  </svg>
+);
+
+const CheckIcon = () => (
+  <svg className="w-3.5 h-3.5 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+  </svg>
+);
 
 // ── Single card ──────────────────────────────────────────────────────────────
 const ProjectCard: React.FC<{ project: Project; index: number }> = ({ project, index }) => (
@@ -71,12 +141,6 @@ const ProjectCard: React.FC<{ project: Project; index: number }> = ({ project, i
   >
     {/* Glow on hover */}
     <div
-      className={`pointer-events-none absolute -inset-px rounded-2xl opacity-0 group-hover:opacity-100
-                  transition-opacity duration-500 blur-2xl bg-gradient-to-br ${project.gradient}`}
-      style={{ opacity: 0 }}
-      aria-hidden
-    />
-    <div
       className={`pointer-events-none absolute -inset-px rounded-2xl opacity-0 group-hover:opacity-[0.07]
                   transition-opacity duration-500 bg-gradient-to-br ${project.gradient}`}
       aria-hidden
@@ -84,57 +148,97 @@ const ProjectCard: React.FC<{ project: Project; index: number }> = ({ project, i
 
     <div className="relative z-10 flex flex-col h-full p-7 md:p-9">
       {/* Header row */}
-      <div className="flex items-start justify-between mb-7">
-        <span className="text-[10px] tracking-[0.25em] text-gray-400 dark:text-gray-600 uppercase font-mono">
+      <div className="flex items-start justify-between mb-5">
+        <span className="text-xs tracking-[0.25em] text-gray-400 dark:text-gray-600 uppercase font-mono">
           {String(project.id).padStart(2, '0')} / {project.year}
         </span>
-        <motion.a
-          href={project.link}
-          whileHover={{ x: 3, y: -3 }}
-          className="opacity-0 group-hover:opacity-100 transition-opacity duration-300
-                     w-8 h-8 rounded-full border border-black/20 dark:border-white/20 flex items-center justify-center
-                     hover:bg-gray-900 dark:hover:bg-white hover:border-gray-900 dark:hover:border-white group/arrow"
-        >
-          <svg
-            className="w-3.5 h-3.5 text-gray-900 dark:text-white group-hover/arrow:text-white dark:group-hover/arrow:text-[#121212] transition-colors"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M17 7H7M17 7v10" />
-          </svg>
-        </motion.a>
+        {/* GitHub button on hover */}
+        {project.github && (
+          <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <motion.a
+              href={project.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub Repository"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
+              className="w-8 h-8 rounded-full border border-black/20 dark:border-white/20 flex items-center justify-center
+                         hover:bg-gray-900 dark:hover:bg-white hover:border-gray-900 dark:hover:border-white
+                         text-gray-600 dark:text-gray-400 hover:text-white dark:hover:text-[#121212]
+                         transition-all duration-200"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <GitHubIcon />
+            </motion.a>
+          </div>
+        )}
       </div>
 
       {/* Visual band */}
       <div
-        className={`w-full h-36 rounded-xl bg-gradient-to-br ${project.gradient}
-                    opacity-[0.12] group-hover:opacity-[0.2] transition-opacity duration-500 mb-7`}
+        className={`w-full h-28 rounded-xl bg-gradient-to-br ${project.gradient}
+                    opacity-[0.12] group-hover:opacity-[0.2] transition-opacity duration-500 mb-6`}
       />
 
       {/* Title */}
-      <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white tracking-tight mb-3">
+      <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white tracking-tight mb-1">
         {project.title}
       </h3>
 
+      {/* Role line */}
+      <p className="text-sm text-gray-400 dark:text-gray-500 mb-4 italic">{project.role}</p>
+
       {/* Description */}
-      <p className="text-gray-600 dark:text-gray-500 text-sm leading-relaxed flex-grow mb-7 group-hover:text-gray-700 dark:group-hover:text-gray-400 transition-colors duration-300">
+      <p className="text-gray-600 dark:text-gray-500 text-base leading-relaxed mb-5 group-hover:text-gray-700 dark:group-hover:text-gray-400 transition-colors duration-300">
         {project.description}
       </p>
 
-      {/* Tags */}
-      <div className="flex flex-wrap gap-2">
-        {project.tags.map((tag) => (
-          <span
-            key={tag}
-            className="px-3 py-1 text-[10px] tracking-wide rounded-full
-                       bg-black/[0.05] dark:bg-white/[0.06] border border-black/[0.08] dark:border-white/[0.1] text-gray-500
-                       group-hover:border-black/20 dark:group-hover:border-white/20 group-hover:text-gray-700 dark:group-hover:text-gray-400
-                       transition-all duration-300 uppercase"
+      {/* QA / Testing highlights */}
+      {project.qaPoints.length > 0 && (
+        <div className="mb-6">
+          <p className="text-xs tracking-[0.2em] text-gray-400 dark:text-gray-600 uppercase mb-3 font-medium">
+            QA Highlights
+          </p>
+          <ul className="space-y-2">
+            {project.qaPoints.map((point, i) => (
+              <li key={i} className="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-500 leading-relaxed group-hover:text-gray-700 dark:group-hover:text-gray-400 transition-colors duration-300">
+                <span className="text-emerald-500 dark:text-emerald-400">
+                  <CheckIcon />
+                </span>
+                {point}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {/* Tags + GitHub link at bottom */}
+      <div className="flex flex-wrap items-center justify-between gap-3 mt-auto">
+        <div className="flex flex-wrap gap-2">
+          {project.tags.map((tag) => (
+            <span
+              key={tag}
+              className="px-3 py-1 text-sm tracking-wide rounded-full
+                         bg-black/[0.05] dark:bg-white/[0.06] border border-black/[0.08] dark:border-white/[0.1] text-gray-500
+                         group-hover:border-black/20 dark:group-hover:border-white/20 group-hover:text-gray-700 dark:group-hover:text-gray-400
+                         transition-all duration-300 uppercase"
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
+        {project.github && (
+          <a
+            href={project.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-1.5 text-sm text-gray-400 dark:text-gray-600 hover:text-gray-900 dark:hover:text-white transition-colors duration-200 shrink-0"
+            onClick={(e) => e.stopPropagation()}
           >
-            {tag}
-          </span>
-        ))}
+            <GitHubIcon />
+            <span>View repo</span>
+          </a>
+        )}
       </div>
     </div>
   </motion.article>
@@ -158,7 +262,7 @@ const Projects: React.FC = () => (
         transition={{ duration: 0.7 }}
         className="mb-16 md:mb-20"
       >
-        <p className="text-[10px] tracking-[0.3em] text-gray-400 dark:text-gray-600 uppercase mb-5">
+        <p className="text-xs tracking-[0.3em] text-gray-400 dark:text-gray-600 uppercase mb-5">
           Selected work
         </p>
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
@@ -169,8 +273,8 @@ const Projects: React.FC = () => (
               Projects
             </span>
           </h2>
-          <p className="text-gray-500 dark:text-gray-600 text-sm max-w-[30ch] leading-relaxed md:text-right">
-            A selection of work that showcases innovation, performance, and craft.
+          <p className="text-gray-500 dark:text-gray-600 text-base max-w-[30ch] leading-relaxed md:text-right">
+            A selection of work that showcases innovation, quality, and craft.
           </p>
         </div>
       </motion.div>
@@ -190,22 +294,38 @@ const Projects: React.FC = () => (
         transition={{ duration: 0.7, delay: 0.2 }}
         className="mt-20 flex flex-col items-center text-center gap-6"
       >
-        <p className="text-gray-500 dark:text-gray-600 text-sm">Seeking internships, graduate roles, or freelance collaborations.</p>
-        <motion.a
-          href="mailto:hello@example.com"
-          whileHover={{ scale: 1.04 }}
-          whileTap={{ scale: 0.97 }}
-          className="inline-flex items-center gap-3 px-8 py-4 bg-gray-900 dark:bg-white text-white dark:text-[#121212]
-                     font-bold text-sm rounded-full hover:bg-gray-700 dark:hover:bg-gray-100 transition-colors duration-200 group"
-        >
-          Let&apos;s Connect
-          <svg
-            className="w-4 h-4 group-hover:translate-x-0.5 transition-transform"
-            fill="none" stroke="currentColor" viewBox="0 0 24 24"
+        <p className="text-gray-500 dark:text-gray-600 text-base">Seeking internships, graduate roles, or freelance collaborations.</p>
+        <div className="flex items-center gap-4">
+          <motion.a
+            href="https://github.com/damiru003"
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.04 }}
+            whileTap={{ scale: 0.97 }}
+            className="inline-flex items-center gap-2.5 px-7 py-3.5 border border-black/[0.1] dark:border-white/[0.12]
+                       text-gray-700 dark:text-gray-300 font-semibold text-base rounded-full
+                       hover:border-black/25 dark:hover:border-white/25 hover:bg-black/[0.04] dark:hover:bg-white/[0.05]
+                       transition-all duration-200 group"
           >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-          </svg>
-        </motion.a>
+            <GitHubIcon />
+            View all on GitHub
+          </motion.a>
+          <motion.a
+            href="mailto:gamagedamiru@gmail.com"
+            whileHover={{ scale: 1.04 }}
+            whileTap={{ scale: 0.97 }}
+            className="inline-flex items-center gap-3 px-8 py-4 bg-gray-900 dark:bg-white text-white dark:text-[#121212]
+                       font-bold text-base rounded-full hover:bg-gray-700 dark:hover:bg-gray-100 transition-colors duration-200 group"
+          >
+            Let&apos;s Connect
+            <svg
+              className="w-4 h-4 group-hover:translate-x-0.5 transition-transform"
+              fill="none" stroke="currentColor" viewBox="0 0 24 24"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+            </svg>
+          </motion.a>
+        </div>
       </motion.div>
     </div>
   </section>

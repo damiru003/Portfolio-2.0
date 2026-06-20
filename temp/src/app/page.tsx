@@ -11,6 +11,7 @@ import Education from '@/components/Education';
 import Experience from '@/components/Experience';
 import Contact from '@/components/Contact';
 import Navbar from '@/components/Navbar';
+import MusicPlayer from '@/components/MusicPlayer';
 
 export default function Home() {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -73,7 +74,7 @@ export default function Home() {
             <div>
               <p className="text-[10px] text-gray-400 dark:text-gray-600 tracking-[0.2em] uppercase mb-4">Navigate</p>
               <ul className="space-y-3">
-                {['About', 'Skills', 'Work', 'Education', 'Experience', 'Contact'].map((l) => (
+                {['About', 'Skills', 'Work', 'Education', 'Competitions', 'Certifications', 'Contact'].map((l) => (
                   <li key={l}>
                     <a href={`#${l.toLowerCase()}`} className="text-sm text-gray-500 hover:text-gray-900 dark:hover:text-white transition-colors">
                       {l}
@@ -88,9 +89,9 @@ export default function Home() {
               <p className="text-[10px] text-gray-400 dark:text-gray-600 tracking-[0.2em] uppercase mb-4">Connect</p>
               <ul className="space-y-3">
                 {[
-                  { label: 'GitHub',   href: 'https://github.com/damiru003' },
+                  { label: 'GitHub', href: 'https://github.com/damiru003' },
                   { label: 'LinkedIn', href: 'https://www.linkedin.com/in/damiru-gamage-05a38b24b' },
-                  { label: 'Email',    href: 'mailto:gamedamiru@gmail.com' },
+                  { label: 'Email', href: 'mailto:gamedamiru@gmail.com' },
                 ].map(({ label, href }) => (
                   <li key={label}>
                     <a href={href} className="text-sm text-gray-500 hover:text-gray-900 dark:hover:text-white transition-colors">
@@ -104,7 +105,7 @@ export default function Home() {
             {/* Contact */}
             <div>
               <p className="text-[10px] text-gray-400 dark:text-gray-600 tracking-[0.2em] uppercase mb-4">Contact</p>
-              <a href="mailto:hello@example.com" className="text-sm text-gray-500 hover:text-gray-900 dark:hover:text-white transition-colors block mb-2">
+              <a href="gamagedamiru@gmail.com" className="text-sm text-gray-500 hover:text-gray-900 dark:hover:text-white transition-colors block mb-2">
                 gamagedamiru@gmail.com
               </a>
               <div className="flex items-center gap-2 mt-3">
@@ -125,6 +126,8 @@ export default function Home() {
           </div>
         </div>
       </footer>
+      {/* ── Music Player ─────────────────────────────────────────────── */}
+      <MusicPlayer />
     </div>
   );
 }

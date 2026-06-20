@@ -10,22 +10,22 @@ interface OverlayProps {
 const Overlay: React.FC<OverlayProps> = ({ scrollYProgress }) => {
   // ── Section 1: Hero (0 → 25%) ──────────────────────────────────────────
   const heroOpacity = useTransform(scrollYProgress, [0, 0.18, 0.26], [1, 1, 0]);
-  const heroY       = useTransform(scrollYProgress, [0, 0.26], ['0%', '-6%']);
+  const heroY = useTransform(scrollYProgress, [0, 0.26], ['0%', '-6%']);
 
   // ── Scroll indicator at bottom of screen (fades as scroll begins) ───────
   const indicatorOpacity = useTransform(scrollYProgress, [0, 0.04, 0.12], [1, 1, 0]);
 
   // ── Section 2: "I build digital experiences" — left (26 → 50%) ──────────
   const s2Opacity = useTransform(scrollYProgress, [0.22, 0.32, 0.46, 0.54], [0, 1, 1, 0]);
-  const s2X       = useTransform(scrollYProgress, [0.22, 0.32], ['-50px', '0px']);
+  const s2X = useTransform(scrollYProgress, [0.22, 0.32], ['-50px', '0px']);
 
   // ── Section 3: "Bridging design & engineering" — right (52 → 78%) ───────
   const s3Opacity = useTransform(scrollYProgress, [0.52, 0.62, 0.76, 0.84], [0, 1, 1, 0]);
-  const s3X       = useTransform(scrollYProgress, [0.52, 0.62], ['50px', '0px']);
+  const s3X = useTransform(scrollYProgress, [0.52, 0.62], ['50px', '0px']);
 
   // ── Section 4: Final CTA (84 → 100%) ─────────────────────────────────────
   const s4Opacity = useTransform(scrollYProgress, [0.84, 0.93], [0, 1]);
-  const s4Y       = useTransform(scrollYProgress, [0.84, 0.93], ['24px', '0px']);
+  const s4Y = useTransform(scrollYProgress, [0.84, 0.93], ['24px', '0px']);
 
   return (
     <div className="pointer-events-none absolute inset-0 z-10">
@@ -36,9 +36,6 @@ const Overlay: React.FC<OverlayProps> = ({ scrollYProgress }) => {
         className="absolute inset-0 flex flex-col items-center justify-center px-6"
       >
         <div className="text-center">
-          <p className="text-[10px] tracking-[0.35em] text-gray-500 uppercase mb-6">
-            01 &nbsp;/&nbsp; Portfolio
-          </p>
           <h1 className="text-[clamp(3rem,8vw,7.5rem)] font-black text-white leading-[0.9] tracking-tighter mb-6">
             Damiru
             <br />
@@ -76,9 +73,6 @@ const Overlay: React.FC<OverlayProps> = ({ scrollYProgress }) => {
         className="absolute inset-0 flex flex-col justify-center items-start pl-10 md:pl-20 lg:pl-28"
       >
         <div className="max-w-xs md:max-w-sm">
-          <p className="text-[10px] tracking-[0.3em] text-gray-500 uppercase mb-5">
-            02 &nbsp;/&nbsp; What I Do
-          </p>
           <h2 className="text-5xl md:text-6xl lg:text-7xl font-black text-white leading-none tracking-tighter mb-5">
             I build
             <br />
@@ -87,7 +81,7 @@ const Overlay: React.FC<OverlayProps> = ({ scrollYProgress }) => {
             <span className="text-gray-400">software.</span>
           </h2>
           <p className="text-gray-500 text-sm leading-relaxed">
-            React &amp; TypeScript for the frontend —
+            React &amp; TypeScript for the frontend
             <br />Firebase, APIs, and real-world integrations.
           </p>
         </div>
@@ -99,9 +93,6 @@ const Overlay: React.FC<OverlayProps> = ({ scrollYProgress }) => {
         className="absolute inset-0 flex flex-col justify-center items-end pr-10 md:pr-20 lg:pr-28"
       >
         <div className="max-w-xs md:max-w-sm text-right">
-          <p className="text-[10px] tracking-[0.3em] text-gray-500 uppercase mb-5">
-            03 &nbsp;/&nbsp; Approach
-          </p>
           <h2 className="text-5xl md:text-6xl lg:text-7xl font-black text-white leading-none tracking-tighter mb-5">
             Dev skills
             <br />
@@ -122,9 +113,6 @@ const Overlay: React.FC<OverlayProps> = ({ scrollYProgress }) => {
         className="absolute inset-0 flex flex-col items-center justify-center px-6"
       >
         <div className="text-center">
-          <p className="text-[10px] tracking-[0.35em] text-gray-500 uppercase mb-6">
-            04 &nbsp;/&nbsp; Let&apos;s Connect
-          </p>
           <h2 className="text-[clamp(2.5rem,7vw,6rem)] font-black text-white leading-none tracking-tighter mb-8">
             Open to
             <br />

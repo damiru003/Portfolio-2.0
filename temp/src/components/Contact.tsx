@@ -139,7 +139,7 @@ const Contact: React.FC = () => {
                 <p className="text-emerald-400 text-xs font-semibold tracking-wide uppercase">Available Now</p>
               </div>
               <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
-                Currently seeking internships, graduate developer roles, and freelance opportunities.
+                Currently seeking internships, QA Automation, QA Engineer, and freelance opportunities.
               </p>
             </div>
           </motion.div>
@@ -181,7 +181,7 @@ const Contact: React.FC = () => {
                     {/* Name + Email row */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                       {[
-                        { id: 'name',  label: 'Your Name',    type: 'text',  placeholder: 'John Doe' },
+                        { id: 'name', label: 'Your Name', type: 'text', placeholder: 'John Doe' },
                         { id: 'email', label: 'Email Address', type: 'email', placeholder: 'john@example.com' },
                       ].map(({ id, label, type, placeholder }) => (
                         <div key={id} className="flex flex-col gap-2">

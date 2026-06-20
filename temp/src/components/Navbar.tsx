@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { useTheme } from 'next-themes';
 
-const NAV_ITEMS = ['About', 'Skills', 'Work', 'Education', 'Experience', 'Contact'];
+const NAV_ITEMS = ['About', 'Skills', 'Work', 'Education', 'Competitions', 'Certifications', 'Contact'];
 
 const Navbar: React.FC = () => {
   const [scrolled, setScrolled]   = useState(false);

@@ -11,34 +11,57 @@ interface SkillGroup {
 
 const SKILL_GROUPS: SkillGroup[] = [
   {
-    category: 'Languages',
-    color: 'from-indigo-500 to-purple-500',
-    skills: ['JavaScript', 'TypeScript', 'Python', 'Java', 'HTML5', 'CSS3'],
-  },
-  {
-    category: 'Frameworks & Libraries',
-    color: 'from-cyan-500 to-blue-500',
-    skills: ['React', 'Tailwind CSS', 'Node.js', 'Bootstrap', 'Framer Motion'],
-  },
-  {
-    category: 'Testing & QA',
+    category: 'Testing',
     color: 'from-emerald-500 to-teal-500',
-    skills: ['Selenium WebDriver', 'TestNG', 'Postman', 'Functional Testing', 'Regression Testing', 'API Testing'],
+    skills: [
+      'Manual Testing',
+      'Functional Testing',
+      'Regression Testing',
+      'Smoke Testing',
+      'Exploratory Testing',
+      'Integration Testing',
+    ],
   },
   {
-    category: 'Tools & Platforms',
-    color: 'from-orange-500 to-rose-500',
-    skills: ['Git', 'GitHub', 'AWS', 'VS Code', 'IntelliJ IDEA'],
+    category: 'QA Processes',
+    color: 'from-cyan-500 to-blue-500',
+    skills: [
+      'SDLC',
+      'STLC',
+      'Agile & Scrum',
+      'Defect Life Cycle',
+      'Requirement Analysis',
+      'Test Planning',
+      'Test Specification',
+      'Bug Reporting',
+    ],
   },
   {
-    category: 'Databases',
-    color: 'from-violet-500 to-fuchsia-500',
-    skills: ['MySQL', 'Firebase', 'Firestore'],
+    category: 'Automation Frameworks & Tools',
+    color: 'from-violet-500 to-purple-500',
+    skills: [
+      'Selenium WebDriver',
+      'TestNG',
+      'Postman',
+      'GitHub',
+      'GitHub Actions (CI/CD)',
+      'Jira',
+    ],
   },
   {
-    category: 'Concepts',
-    color: 'from-amber-500 to-yellow-500',
-    skills: ['SDLC', 'STLC', 'REST APIs', 'OOP', 'Agile / Scrum', 'Computer Vision'],
+    category: 'Programming',
+    color: 'from-indigo-500 to-blue-500',
+    skills: ['Java', 'Python', 'HTML', 'CSS', 'JavaScript'],
+  },
+  {
+    category: 'Database',
+    color: 'from-orange-500 to-amber-500',
+    skills: ['MySQL', 'Firebase'],
+  },
+  {
+    category: 'Cloud',
+    color: 'from-sky-500 to-cyan-500',
+    skills: ['AWS (Basic)'],
   },
 ];
 
@@ -59,7 +82,7 @@ const Skills: React.FC = () => (
         transition={{ duration: 0.7 }}
         className="mb-16 md:mb-20"
       >
-        <p className="text-[10px] tracking-[0.3em] text-gray-400 dark:text-gray-600 uppercase mb-5">Technical Skills</p>
+        <p className="text-xs tracking-[0.3em] text-gray-400 dark:text-gray-600 uppercase mb-5">Technical Skills</p>
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
           <h2 className="text-5xl md:text-6xl lg:text-7xl font-black text-gray-900 dark:text-white tracking-tighter leading-none">
             My
@@ -68,7 +91,7 @@ const Skills: React.FC = () => (
               Toolkit
             </span>
           </h2>
-          <p className="text-gray-500 dark:text-gray-600 text-sm max-w-[32ch] leading-relaxed md:text-right">
+          <p className="text-gray-500 dark:text-gray-600 text-base max-w-[32ch] leading-relaxed md:text-right">
             Technologies I use to build reliable, tested, and scalable software.
           </p>
         </div>
@@ -89,7 +112,7 @@ const Skills: React.FC = () => (
             {/* Category header */}
             <div className="flex items-center gap-3 mb-6">
               <div className={`w-2 h-2 rounded-full bg-gradient-to-br ${group.color} shrink-0`} />
-              <p className="text-[11px] tracking-[0.2em] text-gray-500 dark:text-gray-500 uppercase font-medium">
+              <p className="text-sm tracking-[0.15em] text-gray-500 dark:text-gray-400 uppercase font-medium">
                 {group.category}
               </p>
             </div>
@@ -103,7 +126,7 @@ const Skills: React.FC = () => (
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.3, delay: gi * 0.07 + si * 0.04 }}
-                  className="px-3 py-1.5 text-xs rounded-lg
+                  className="px-3 py-1.5 text-base rounded-lg
                              bg-black/[0.04] dark:bg-white/[0.05] border border-black/[0.08] dark:border-white/[0.08] text-gray-600 dark:text-gray-400
                              group-hover:border-black/[0.14] dark:group-hover:border-white/[0.14] group-hover:text-gray-800 dark:group-hover:text-gray-300
                              transition-all duration-300"

@@ -40,7 +40,7 @@ const Education: React.FC = () => (
         transition={{ duration: 0.7 }}
         className="mb-16 md:mb-20"
       >
-        <p className="text-[10px] tracking-[0.3em] text-gray-400 dark:text-gray-600 uppercase mb-5">Education</p>
+        <p className="text-xs tracking-[0.3em] text-gray-400 dark:text-gray-600 uppercase mb-5">Education</p>
         <h2 className="text-5xl md:text-6xl lg:text-7xl font-black text-gray-900 dark:text-white tracking-tighter leading-none">
           Academic
           <br />
@@ -77,21 +77,21 @@ const Education: React.FC = () => (
                 <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white tracking-tight mb-2 leading-snug">
                   {edu.degree}
                 </h3>
-                <p className="text-gray-600 dark:text-gray-400 text-sm font-medium mb-1">{edu.institution}</p>
-                <p className="text-gray-400 dark:text-gray-600 text-sm font-mono">{edu.period}</p>
-                <p className="text-gray-500 text-sm mt-3 italic">{edu.grade}</p>
+                <p className="text-gray-600 dark:text-gray-400 text-lg font-medium mb-1">{edu.institution}</p>
+                <p className="text-gray-400 dark:text-gray-600 text-base font-mono">{edu.period}</p>
+                <p className="text-gray-500 text-base mt-3 italic">{edu.grade}</p>
               </div>
 
               {/* Right: highlights */}
               <div className="lg:col-span-2">
-                <p className="text-[10px] tracking-[0.2em] text-gray-400 dark:text-gray-600 uppercase mb-4">
+                <p className="text-sm tracking-[0.15em] text-gray-400 dark:text-gray-600 uppercase mb-4">
                   {edu.id === 1 ? 'Key Modules' : 'Subjects'}
                 </p>
                 <div className="flex flex-wrap gap-2">
                   {edu.highlights.map((h) => (
                     <span
                       key={h}
-                      className="px-3 py-1.5 text-xs rounded-lg
+                      className="px-3 py-1.5 text-base rounded-lg
                                  bg-black/[0.04] dark:bg-white/[0.05] border border-black/[0.08] dark:border-white/[0.08] text-gray-600 dark:text-gray-400
                                  group-hover:border-black/[0.14] dark:group-hover:border-white/[0.14] group-hover:text-gray-800 dark:group-hover:text-gray-300
                                  transition-all duration-300"
