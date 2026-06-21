@@ -35,30 +35,7 @@ public/
 └── sequence/                  # 120 WebP frames (frame_000 to frame_119)
 ```
 
----
 
-## 🚀 Quick Start
-
-### 1. Install Dependencies
-```bash
-cd .
-npm install --legacy-peer-deps
-```
-
-### 2. Start Development Server
-```bash
-npm run dev
-```
-
-Open **http://localhost:3000** in your browser.
-
-### 3. Build for Production
-```bash
-npm run build
-npm start
-```
-
----
 
 ## 🎨 Component Overview
 
@@ -95,28 +72,6 @@ Glass-morphism project cards with:
 ♿ **Semantic HTML & accessibility**
 🚀 **Production-ready performance**
 
----
-
-## 🎯 Customization
-
-### Change Background Color
-Edit [globals.css](src/app/globals.css):
-```css
-:root {
-  --background: #121212;  /* Change to your color */
-}
-```
-
-### Adjust Scroll Duration
-Modify `h-[500vh]` in [ScrollyCanvas.tsx](src/components/ScrollyCanvas.tsx):
-```typescript
-<div className="relative h-[500vh]">  {/* Adjust value */}
-```
-
-### Add Projects
-Edit [Projects.tsx](src/components/Projects.tsx) `PROJECTS` array
-
----
 
 ## 📊 Image Sequence
 
@@ -127,21 +82,6 @@ Edit [Projects.tsx](src/components/Projects.tsx) `PROJECTS` array
 
 ---
 
-## 🛠️ Troubleshooting
-
-**Canvas blank?**
-- Ensure all 120 frames are in `/public/sequence/`
-- Check browser console for load errors
-
-**Animations stuttering?**
-- Enable GPU acceleration
-- Check DevTools rendering performance
-
-**Images 404?**
-- Clear browser cache (Ctrl+Shift+R)
-- Verify paths in Network tab
-
----
 
 ## 📦 Dependencies
 
