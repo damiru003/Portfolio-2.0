@@ -26,8 +26,8 @@ const SOCIALS = [
   },
   {
     label: 'Email',
-    handle: 'gamedamiru@gmail.com',
-    href: 'gamagedamiru@gmail.com',
+    handle: 'gamagedamiru@gmail.com',
+    href: 'mailto:gamagedamiru@gmail.com',
     icon: (
       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -35,6 +35,8 @@ const SOCIALS = [
     ),
   },
 ];
+
+const WEB3FORMS_KEY = '4f2b2a13-aae5-44b5-8b6c-079999e9e14a';
 
 type FormState = 'idle' | 'sending' | 'sent' | 'error';
 
@@ -49,9 +51,28 @@ const Contact: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus('sending');
-    // Simulate async send — replace with real API call
-    await new Promise((r) => setTimeout(r, 1400));
-    setStatus('sent');
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_KEY,
+          name: form.name,
+          email: form.email,
+          message: form.message,
+          subject: `Portfolio Contact from ${form.name}`,
+        }),
+      });
+      const data = await res.json();
+      if (data.success) {
+        setStatus('sent');
+        setForm({ name: '', email: '', message: '' });
+      } else {
+        setStatus('error');
+      }
+    } catch {
+      setStatus('error');
+    }
   };
 
   return (
@@ -253,6 +274,14 @@ const Contact: React.FC = () => {
                         </>
                       )}
                     </motion.button>
+
+                    {/* Error message */}
+                    {status === 'error' && (
+                      <p className="text-red-400 text-sm text-center mt-1">
+                        Something went wrong. Please try again or email me directly at{' '}
+                        <a href="mailto:gamagedamiru@gmail.com" className="underline">gamagedamiru@gmail.com</a>.
+                      </p>
+                    )}
                   </motion.form>
                 )}
               </AnimatePresence>
