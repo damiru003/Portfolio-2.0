@@ -67,7 +67,7 @@ const About: React.FC = () => {
             {/* CTA links */}
             <div className="flex flex-wrap items-center gap-4 mt-10">
               <motion.a
-                href="/DB_Gamage_QA"
+                href="/Damiru-Gamage-CV.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 download
