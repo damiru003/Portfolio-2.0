@@ -51,12 +51,27 @@ const SKILL_GROUPS: SkillGroup[] = [
   {
     category: 'Programming',
     color: 'from-indigo-500 to-blue-500',
-    skills: ['Java', 'Python', 'HTML', 'CSS', 'JavaScript'],
+    skills: ['Python', 'Java', 'JavaScript', 'TypeScript', 'HTML5', 'CSS3'],
+  },
+  {
+    category: 'Frontend',
+    color: 'from-pink-500 to-rose-500',
+    skills: ['React.js', 'Next.js', 'TypeScript', 'HTML5', 'CSS3'],
+  },
+  {
+    category: 'Backend & APIs',
+    color: 'from-violet-500 to-indigo-600',
+    skills: ['Node.js', 'Express.js', 'Flask', 'FastAPI', 'WebSocket', 'JWT', 'REST API'],
   },
   {
     category: 'Database',
     color: 'from-orange-500 to-amber-500',
-    skills: ['MySQL', 'Firebase'],
+    skills: ['MySQL', 'PostgreSQL', 'MongoDB', 'Firebase'],
+  },
+  {
+    category: 'UI/UX',
+    color: 'from-fuchsia-500 to-pink-500',
+    skills: ['Figma'],
   },
   {
     category: 'Cloud',

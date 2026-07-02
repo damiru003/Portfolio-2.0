@@ -80,9 +80,13 @@ const Overlay: React.FC<OverlayProps> = ({ scrollYProgress }) => {
             <br />
             <span className="text-gray-400">software.</span>
           </h2>
+
           <p className="text-gray-500 text-sm leading-relaxed">
-            React &amp; TypeScript for the frontend
-            <br />Firebase, APIs, and real-world integrations.
+            React, Next.js & TypeScript for the frontend
+            <br />
+            FastAPI, Node.js, REST APIs, and WebSocket for the backend
+            <br />
+            PostgreSQL, MongoDB & Firebase for data and integrations
           </p>
         </div>
       </motion.div>

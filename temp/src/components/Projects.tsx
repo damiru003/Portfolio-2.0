@@ -9,6 +9,7 @@ interface Project {
   year: string;
   role: string;
   description: string;
+  devPoints: string[];
   qaPoints: string[];
   tags: string[];
   gradient: string;
@@ -24,6 +25,7 @@ const PROJECTS: Project[] = [
     role: 'Final Year Research Project · Full-Stack Developer · Python, React, NLP',
     description:
       'An AI-assisted web application that transforms complex academic texts into beginner-friendly explanations using the Feynman Technique. Generates structured simplifications with real-life analogies, step-by-step breakdowns, and "why-it-works" reasoning, then automatically verifies factual accuracy using NLI with DeBERTa-v3-small, producing a measurable Support Score. Low-quality outputs are auto-regenerated via a self-correction loop, and interactive quizzes reinforce retention.',
+    devPoints: [],
     qaPoints: [
       'Integrated an automated faithfulness-verification pipeline: claims extracted from AI output are verified against source text using semantic retrieval and Natural Language Inference (NLI).',
       'Built a self-correction loop that regenerates explanations falling below a quality threshold ensuring pedagogically sound, faithful outputs.',
@@ -35,11 +37,32 @@ const PROJECTS: Project[] = [
   },
   {
     id: 2,
+    title: 'DevPulse — Real-Time Developer Activity Dashboard',
+    year: '2025',
+    role: 'Solo Project · Full-Stack Developer · FastAPI, Next.js, PostgreSQL, WebSocket',
+    description:
+      'A full-stack real-time dashboard for tracking developer activity with a FastAPI async REST API, PostgreSQL + SQLAlchemy 2.0 ORM, and JWT/bcrypt authentication — connected to a Next.js 16 TypeScript frontend with SSR and typed API client.',
+    devPoints: [
+      'Built a FastAPI async REST API with 10 endpoints, PostgreSQL + SQLAlchemy 2.0 ORM, and JWT/bcrypt authentication.',
+      'Engineered a WebSocket broadcast system for live activity updates across all connected clients with interactive Recharts visualizations.',
+      'Implemented a fully custom glassmorphism dark UI — no CSS frameworks — with SSR on Next.js 16 TypeScript frontend.',
+    ],
+    qaPoints: [],
+    tags: ['FastAPI', 'Next.js', 'PostgreSQL', 'WebSocket', 'JWT', 'TypeScript', 'Recharts'],
+    gradient: 'from-sky-400 via-cyan-500 to-teal-500',
+    github: 'https://github.com/damiru003/DevPulse',
+  },
+  {
+    id: 3,
     title: 'Attend AI – Intelligent Attendance System',
     year: '2025',
     role: 'Solo Project · QA & Developer Role · Python, Flask, dlib, OpenCV',
     description:
       'An AI-powered attendance system using face recognition and computer vision to automatically record student attendance and detect emotions in real time, reducing manual tracking overhead.',
+    devPoints: [
+      'Developed an AI-powered attendance system with real-time face recognition and live camera streaming via a Flask web interface.',
+      'Built attendance logging and notification features with emotion detection using dlib and OpenCV pipelines.',
+    ],
     qaPoints: [
       'Authored 25+ test scenarios targeting face detection edge cases, attendance marking logic, and email notification flows.',
       'Exposed low-light and camera-access failures through real-world environmental testing, tracked fixes through full regression cycles.',
@@ -50,12 +73,16 @@ const PROJECTS: Project[] = [
     github: 'https://github.com/damiru003/Face-attendance-system',
   },
   {
-    id: 3,
+    id: 4,
     title: 'Accident, Complaint & Certification Management System',
     year: '2025',
-    role: 'Group Project · QA Role · MERN Stack',
+    role: 'Group Project · QA & Developer Role · MERN Stack',
     description:
       'A management platform for Bio Foods (PVT) LTD handling accident reporting, complaint management, certification tracking, and procedure change requests across organisational workflows.',
+    devPoints: [
+      'Developed a role-based web application with real-time notifications and workflow management to handle accident, complaint, and certification processes.',
+      'Built customizable reporting flows and user-friendly modules across the MERN stack.',
+    ],
     qaPoints: [
       'Designed and executed 40+ manual test cases for accident reporting, complaint management, certification tracking, and procedure change request modules.',
       'Performed API testing using Postman to validate backend endpoints.',
@@ -67,12 +94,16 @@ const PROJECTS: Project[] = [
     github: 'https://github.com/damiru003',
   },
   {
-    id: 4,
+    id: 5,
     title: 'PlanTogether',
     year: '2026',
     role: 'Solo Project · QA & Developer Role · React, TypeScript, Firebase',
     description:
       'A multi-organization event planning platform supporting event management, RSVP tracking, real-time voting, comment threads, and secure role-based access control across organizations.',
+    devPoints: [
+      'Built responsive UI components and real-time event features including RSVP tracking, voting, comments, and role-based access control.',
+      'Integrated Firebase Auth, Firestore real-time sync, Recharts for analytics, and organization-level data isolation.',
+    ],
     qaPoints: [
       'Designed and executed 30+ test cases for features such as event creation, voting, RSVP tracking, and comments.',
       'Implemented unit tests with Jest & React Testing Library.',
@@ -83,12 +114,13 @@ const PROJECTS: Project[] = [
     github: 'https://github.com/damiru003/PlanTogether',
   },
   {
-    id: 5,
+    id: 6,
     title: 'Selenium Test Automation Framework',
     year: '2026',
     role: 'Solo Project · Ongoing · Java, Selenium WebDriver, TestNG',
     description:
       'A comprehensive web automation test suite built with Selenium WebDriver and TestNG to validate end-to-end user flows on web applications using the Page Object Model design pattern.',
+    devPoints: [],
     qaPoints: [
       'Building a test automation framework using Selenium and TestNG with the Page Object Model design pattern.',
       'Creating reusable wrapper methods and structured automation, application, and test layers.',
@@ -99,12 +131,32 @@ const PROJECTS: Project[] = [
     github: 'https://github.com/damiru003/Selenium_Test_Automation_Framework',
   },
   {
-    id: 6,
+    id: 7,
+    title: 'AI-Based Image Denoising System',
+    year: '2025',
+    role: 'Solo Project · Developer Role · Python, Deep Learning',
+    description:
+      'A deep learning application that uses convolutional neural networks to remove noise from images and restore image quality. Trained and evaluated on standard image datasets with measurable PSNR improvements.',
+    devPoints: [
+      'Built a deep learning image denoising application using CNN models with a Flask-based web interface for image upload, processing, and result preview.',
+      'Designed the frontend interaction flow and validated image quality using PSNR, SSIM, and MSE metrics.',
+    ],
+    qaPoints: [],
+    tags: ['Python', 'Flask', 'Deep Learning', 'CNN', 'OpenCV', 'NumPy'],
+    gradient: 'from-orange-400 via-rose-500 to-pink-600',
+    github: 'https://github.com/damiru003/Noiceremoval',
+  },
+  {
+    id: 8,
     title: 'Bookstore Management System',
     year: '2025',
     role: 'Solo Project · QA & Developer Role · Python, Owlready2, Mesa',
     description:
       'An intelligent bookstore simulation using ontology-based knowledge representation and software agents to model real-world bookstore operations including inventory management, purchase recommendations, and customer interactions.',
+    devPoints: [
+      'Designed a multi-agent system in Python simulating real-world bookstore workflows, applying object-oriented and rule-based logic for automated decision-making.',
+      'Built an interactive GUI for real-time visualization of system behavior and agent interactions.',
+    ],
     qaPoints: [
       'Tested ontology-based bookstore simulation with customer and employee agents.',
       'Designed scenarios for agent browsing, purchasing, and restocking.',
@@ -114,18 +166,6 @@ const PROJECTS: Project[] = [
     tags: ['Python', 'Owlready2', 'Mesa', 'Ontology', 'Intelligent Agents'],
     gradient: 'from-violet-500 via-fuchsia-500 to-indigo-500',
     github: 'https://github.com/damiru003/Bookstore-Management-System-with-Ontology-and-Multi-Agent--Simulation',
-  },
-  {
-    id: 7,
-    title: 'Image Denoising Application',
-    year: '2025',
-    role: 'Solo Project · Developer Role · Python, Deep Learning',
-    description:
-      'A deep learning application that uses convolutional neural networks to remove noise from images and restore image quality. Trained and evaluated on standard image datasets with measurable PSNR improvements.',
-    qaPoints: [],
-    tags: ['Python', 'Deep Learning', 'CNN', 'Image Processing'],
-    gradient: 'from-orange-400 via-rose-500 to-pink-600',
-    github: 'https://github.com/damiru003/Noiceremoval',
   },
 ];
 
@@ -139,6 +179,12 @@ const GitHubIcon = () => (
 const CheckIcon = () => (
   <svg className="w-3.5 h-3.5 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+  </svg>
+);
+
+const CodeIcon = () => (
+  <svg className="w-3.5 h-3.5 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
   </svg>
 );
 
@@ -209,10 +255,31 @@ const ProjectCard: React.FC<{ project: Project; index: number }> = ({ project, i
         {project.description}
       </p>
 
+      {/* Dev highlights */}
+      {project.devPoints.length > 0 && (
+        <div className="mb-5">
+          <p className="text-xs tracking-[0.2em] text-gray-400 dark:text-gray-600 uppercase mb-3 font-medium flex items-center gap-1.5">
+            <span className="inline-block w-1.5 h-1.5 rounded-full bg-sky-400" />
+            Dev Highlights
+          </p>
+          <ul className="space-y-2">
+            {project.devPoints.map((point, i) => (
+              <li key={i} className="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-500 leading-relaxed group-hover:text-gray-700 dark:group-hover:text-gray-400 transition-colors duration-300">
+                <span className="text-sky-500 dark:text-sky-400">
+                  <CodeIcon />
+                </span>
+                {point}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
       {/* QA / Testing highlights */}
       {project.qaPoints.length > 0 && (
         <div className="mb-6">
-          <p className="text-xs tracking-[0.2em] text-gray-400 dark:text-gray-600 uppercase mb-3 font-medium">
+          <p className="text-xs tracking-[0.2em] text-gray-400 dark:text-gray-600 uppercase mb-3 font-medium flex items-center gap-1.5">
+            <span className="inline-block w-1.5 h-1.5 rounded-full bg-emerald-400" />
             QA Highlights
           </p>
           <ul className="space-y-2">
